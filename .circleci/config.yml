@@ -1,0 +1,18 @@
+<!doctype html>
+<?
+$url = "http://api.openweathermap.org/data/2.5/weather?"+"appid=1e74e496fb3e9e5f64edf3eb9e161932&q=Mons&lang=fr&units=metric";
+$getweather = simple_load_file($uel);
+$gettemp = $getweather->list->item->temperature['value'];
+?>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Méteo Mons</title>
+</head>
+<body>
+<h1> Mons météo </h1>
+<ul>
+	<li>Temperature : <? echo($gettemp); ?> $deg;C</li>
+</ul>
+</body>
+</html>
